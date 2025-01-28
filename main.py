@@ -48,3 +48,50 @@ print((numbers)) # sıralamak
 print(numbers.count(110)) # belirli bir değerin tekrar sayısına ulaşmak.
 numbers.reverse()
 print(numbers)
+
+# döngüler
+# yazdığım x satır kodun y adet çalışmasını sağlamak
+
+# indentation mantığı
+# for { } - (scope)
+my_variable2 = "For disindaki değişken"
+
+for i in range(5):
+    my_variable = "For içindeki değişken"
+    print(my_variable2)
+    print(i)
+    print("For çalisti")
+
+print(my_variable)
+
+for i in range(5,10):
+    print(i)
+print("**********")
+for i in range(5,10,2):
+    print(i)
+
+#range(başlangıç (0),bitiş,adım (1))
+#range(bitiş) => tek zorunlu
+
+# tab -> 1 indent sağa
+# shift + tab -> 1 indent sola
+
+#
+students = ["Merve","Şeyda","Şüheda","Ece"]
+
+for student in students:
+    print(student)
+
+
+# koşul - şart blokları
+# bir duruma göre belirli kod bloklarını çalıştırmak
+note = 50
+# bir if bloğu sadece bir sonuç çalıştırır.
+if note >= 50:
+    print("Geçtiniz")
+
+if note == 50:
+    print("Sınırdan geçtiniz.")
+else:
+    print("Kaldınız")
+#
