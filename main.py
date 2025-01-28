@@ -95,3 +95,32 @@ if note == 50:
 else:
     print("Kaldınız")
 #
+
+for student in students:
+    if student == "Şüheda":
+        break # bu loopu burda bitir
+    print(student)
+else:
+    print("1. For loopu bitti.")
+print("******")
+
+for student in students:
+    if student == "Şüheda":
+        continue # bu iterasyonu burda bitir.
+    print(student)
+else: # break ile kırılmadıysa loop bitiminde çalışır.
+    print("2. For loopu bitti.")
+
+
+# while döngüsü
+i=0
+while i<5: # koşul sağlandığı sürece buradaki döngüyü çalıştır.
+    print(i)
+    i += 1
+
+student_name = "Halit"
+
+#while student_name == "Halit":
+#    print("**")
+
+# match-case 3.9,3.8
