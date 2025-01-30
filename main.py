@@ -124,3 +124,24 @@ student_name = "Halit"
 #    print("**")
 
 # match-case 3.9,3.8
+print("************** DERS 2 ********************")
+# string
+age = 25 # dışarıdan int olarak geliyor
+name = "Halit"
+# text = "Merhaba, adım " + name + " yaşım " + age # formatlama # hatalı
+
+#built-in
+
+text = f"Merhaba, adım {name} yaşım {15+15}" # f-string
+#text = "Merhaba, adım {} yaşım {}".format(name, age)
+#text = "Merhaba, adım {name} yaşım {age}".format(name=name, age=age)
+print(text)
+#
+
+# functions
+
+#
+
+# oop
+
+#
