@@ -136,6 +136,20 @@ text = f"Merhaba, adım {name} yaşım {15+15}" # f-string
 #text = "Merhaba, adım {} yaşım {}".format(name, age)
 #text = "Merhaba, adım {name} yaşım {age}".format(name=name, age=age)
 print(text)
+
+text2 = "tURKcell kodlamaio"
+print(text2.capitalize())
+print(text2.lower())
+print(text2.upper())
+print(text2.endswith("oio")) # case-sensitive
+print(text2.startswith("tu")) # case-sensitive
+print(text2.lower().startswith("turkc"))
+
+age2 = "25"
+print(age2.isalnum())
+print(age2.isnumeric())
+print(age2.isascii())
+print(age2.isspace())
 #
 
 # functions
