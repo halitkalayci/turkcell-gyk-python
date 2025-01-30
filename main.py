@@ -237,10 +237,10 @@ introduce_instructor(fname="Halit Enes",lname="Kalaycı",age=25)
 introduce_instructor(fname="Engin",lname="Demiroğ",age=25)
 
 
-def default_parameter(name, country = "Turkey"):
-    print(f"{name} {country}")
+def default_parameter(name, country = "Turkey", city="Istanbul"):
+    print(f"{name} {country} {city}")
 
-default_parameter("A","Greece")
+default_parameter(name="A", city="Atina")
 default_parameter("B","Bulgaria")
 default_parameter("C")
 
