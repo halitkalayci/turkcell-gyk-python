@@ -244,3 +244,12 @@ default_parameter("A","Greece")
 default_parameter("B","Bulgaria")
 default_parameter("C")
 
+
+#def default_parameter2(name = "Halit",country):
+    #print(f"{name} {country}")
+
+#default_parameter2("A","Greece")
+#default_parameter2("B","Bulgaria")
+#default_parameter2("","C")
+
+#oop
