@@ -26,8 +26,8 @@ print(x)
 print(y)
 
 # type-safe değildir.
-number = 5
-number = "Halit"
+number = 5 #int
+number = "Halit" #string
 print(number)
 
 # index 
@@ -168,12 +168,55 @@ print(escape_characters2)
 
 folder_path = r"C:\Program Files\Turkcell\n" #raw -> kaçış karakterlerini iptal et.
 print(folder_path)
-#
 
 # functions
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
+print("X Fonksiyonu çalıştı..")
 
-#
+# define-definition
+def say_hello():
+    print("Merhaba Turkcell")
 
-# oop
+say_hello()
+say_hello()
+say_hello()
+say_hello()
+say_hello()
+say_hello()
 
+# parametre, argüman* args
+def calculate_age(year):
+    age = 2025 - year
+    print(f"Hesaplanan yaşınız {age}")
+
+calculate_age(1998)
+calculate_age(1985)
+calculate_age(2000)
+calculate_age(2002)
+calculate_age(1978)
+
+def say_hi(fname, lname):
+    print(f"Merhaba {fname} {lname}")
+
+say_hi("Halit Enes","Kalayci")
+
+
+def calculate_return_age(year):
+    age = 2025 - year
+    return age
+
+age5 = calculate_return_age(2000)
+print(age5)
+if(age5 < 18):
+    print("Reşit değil")
+else:
+    print("Reşit")
 #
