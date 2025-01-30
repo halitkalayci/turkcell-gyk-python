@@ -150,6 +150,24 @@ print(age2.isalnum())
 print(age2.isnumeric())
 print(age2.isascii())
 print(age2.isspace())
+
+text3 = 'Merhaba Turkcell'
+print(text3)
+
+long_text = '''Satır 1
+Satır 2
+Satır 3''' # 3 tırnak ile çoklu satır metinsel ifade oluşturulabilir.
+
+print(long_text)
+
+escape_characters = "Bugünkü konumuz \"Python ile programlama\"" #escape character \
+print(escape_characters)
+
+escape_characters2 = "Bugünkü konumuz \n \\ Python ile Programlama"
+print(escape_characters2)
+
+folder_path = r"C:\Program Files\Turkcell\n" #raw -> kaçış karakterlerini iptal et.
+print(folder_path)
 #
 
 # functions
