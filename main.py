@@ -219,4 +219,28 @@ if(age5 < 18):
     print("Reşit değil")
 else:
     print("Reşit")
+
+# *args
+def print_lessons(*lessons):
+    for lesson in lessons:
+        print(lesson)
+print_lessons("Java","Python")
+print_lessons("C#")
+print_lessons("İstatistik","Matematik","Biyoloji")
 #
+
+# **kwargs -> keyword args
+def introduce_instructor(**instructor):
+    print(f"Ad: {instructor['fname']}  Soyad: {instructor['lname']} Yaş: {instructor['age']}")
+
+introduce_instructor(fname="Halit Enes",lname="Kalaycı",age=25)
+introduce_instructor(fname="Engin",lname="Demiroğ",age=25)
+
+
+def default_parameter(name, country = "Turkey"):
+    print(f"{name} {country}")
+
+default_parameter("A","Greece")
+default_parameter("B","Bulgaria")
+default_parameter("C")
+
