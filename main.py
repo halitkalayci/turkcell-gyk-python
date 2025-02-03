@@ -253,3 +253,7 @@ default_parameter("C")
 #default_parameter2("","C")
 
 #oop
+
+#20:30 -> 
+
+# oop - nesne yönelimli programlama
