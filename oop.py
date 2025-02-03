@@ -20,3 +20,38 @@ c1.stop()
 
 c2 = Car("Honda","Civic") #yapıcı blok
 c2.start(2,3)
+
+
+# oop concepts
+
+#kalıtım-inheritance
+
+class Animal(): #super-class
+    def __init__(self,name):
+        self.name = name
+    def make_sound(self):
+        print("Animal sound")
+    def x(self):
+        print("Animal X Methodu")
+
+#class Mammal(Animal):
+ #   pass
+# Cat -> Mammal -> Animal
+
+class Bird(Animal): #sub-class
+    def make_sound(self): # Method Overriding - Method Ezme
+        self.x() # -> self -> classın kendisi
+        #super.__call__() # -> super -> kalıtım aldığım classı
+        print("Bird sound")
+
+# Cat -> Animal,Mammal        
+class Cat(Animal):
+    def make_sound(self): 
+        print("Cat sound")
+
+b1 = Bird("Bird")
+b1.make_sound()
+
+c1 = Cat("Cat")
+c1.make_sound()
+#
