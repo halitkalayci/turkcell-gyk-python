@@ -60,23 +60,43 @@ c1.make_sound()
 #Encapsulation-Kapsülleme -> Fieldlara dışardan erişimi kapatıp bu fieldların methodlar ile yönetilmesini sağlamak.
 class Account:
     def __init__(self,startBalance):
-        self.__balance = startBalance
+        self._balance = startBalance
     def deposit(self, amount):
-        self.__balance += amount
+        self._balance += amount
         print(f"{amount} kadar para yatırılıyor.")
     def withdraw(self, amount):
-        if(self.__balance < amount):
+        if(self._balance < amount):
             print("Bu kadar miktar çekemezsiniz..")
             return
-        self.__balance -= amount
+        self._balance -= amount
         print(f"{amount} kadar para çekiliyor..")
     def print_status(self):
-        print(f"Hesap bakiyesi: {self.__balance}")
+        print(f"Hesap bakiyesi: {self._balance}")
+
+class Acc(Account):
+    def deposit(self, amount, x):
+        self._balance += amount
+        print(f"{amount} kadar para yatırılıyor. {x}")
+    def a(self):
+        self._balance += 500
+        print(self._balance)
 #
 
 a1 = Account(1000)
-#a1.__balance -= 100
+a1._balance -= 5000
 a1.deposit(500)
 a1.withdraw(1200)
 a1.withdraw(1200)
 a1.print_status()
+
+a2 = Acc(500)
+a2.deposit(5000, 1)
+#a2.deposit(5000)
+a2.a()
+
+# Loglama BaseLogger -> log() -> DB'e yaz.
+# 3 tane logger -> XLogger, YLogger, ZLogger log() override et, not defterine yaz.
+
+
+
+
