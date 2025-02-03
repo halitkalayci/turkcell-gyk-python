@@ -40,9 +40,8 @@ class Animal(): #super-class
 
 class Bird(Animal): #sub-class
     def make_sound(self): # Method Overriding - Method Ezme
-        self.x() # -> self -> classın kendisi
-        #super.__call__() # -> super -> kalıtım aldığım classı
-        print("Bird sound")
+        print("Bird sound") # make_sound()
+        super().make_sound() # super classında make_sound()
 
 # Cat -> Animal,Mammal        
 class Cat(Animal):
@@ -55,3 +54,29 @@ b1.make_sound()
 c1 = Cat("Cat")
 c1.make_sound()
 #
+
+#
+
+#Encapsulation-Kapsülleme -> Fieldlara dışardan erişimi kapatıp bu fieldların methodlar ile yönetilmesini sağlamak.
+class Account:
+    def __init__(self,startBalance):
+        self.__balance = startBalance
+    def deposit(self, amount):
+        self.__balance += amount
+        print(f"{amount} kadar para yatırılıyor.")
+    def withdraw(self, amount):
+        if(self.__balance < amount):
+            print("Bu kadar miktar çekemezsiniz..")
+            return
+        self.__balance -= amount
+        print(f"{amount} kadar para çekiliyor..")
+    def print_status(self):
+        print(f"Hesap bakiyesi: {self.__balance}")
+#
+
+a1 = Account(1000)
+#a1.__balance -= 100
+a1.deposit(500)
+a1.withdraw(1200)
+a1.withdraw(1200)
+a1.print_status()
