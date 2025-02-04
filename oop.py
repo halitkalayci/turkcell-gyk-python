@@ -97,6 +97,3 @@ a2.a()
 # Loglama BaseLogger -> log() -> DB'e yaz.
 # 3 tane logger -> XLogger, YLogger, ZLogger log() override et, not defterine yaz.
 
-
-
-
