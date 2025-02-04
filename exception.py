@@ -1,4 +1,4 @@
-# Hata Yönetimi
+# Exception Handling - Hata Yönetimi
 
 print("Hata Yönetimi Başladı")
 
