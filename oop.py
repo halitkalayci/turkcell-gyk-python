@@ -55,35 +55,48 @@ c1 = Cat("Cat")
 c1.make_sound()
 #
 
+# nesne koleksiyonundaki nesnelerin aynı davranışı farklı şekillerde yapmasıdır.
+animals = [Cat("Cat2"), Bird("Bird2")]
+print("*****")
+for animal in animals:
+    animal.make_sound() #polymorphism - çok biçimlilik
+print("*****")
+
+#
 #
 
 #Encapsulation-Kapsülleme -> Fieldlara dışardan erişimi kapatıp bu fieldların methodlar ile yönetilmesini sağlamak.
 class Account:
     def __init__(self,startBalance):
-        self._balance = startBalance
+        self.__balance = startBalance #private
     def deposit(self, amount):
-        self._balance += amount
+        self.__balance += amount
         print(f"{amount} kadar para yatırılıyor.")
     def withdraw(self, amount):
-        if(self._balance < amount):
+        if(self.__balance < amount):
             print("Bu kadar miktar çekemezsiniz..")
             return
-        self._balance -= amount
+        self.__balance -= amount
         print(f"{amount} kadar para çekiliyor..")
     def print_status(self):
-        print(f"Hesap bakiyesi: {self._balance}")
+        print(f"Hesap bakiyesi: {self.__balance}")
+    def get_balance(self):
+        return self.__balance
+#    def set_balance(self,balance):
+#        self.__balance = balance
 
 class Acc(Account):
     def deposit(self, amount, x):
-        self._balance += amount
+        self.__balance += amount
         print(f"{amount} kadar para yatırılıyor. {x}")
     def a(self):
-        self._balance += 500
-        print(self._balance)
+        self.__balance += 500
+        print(self.__balance)
 #
 
 a1 = Account(1000)
-a1._balance -= 5000
+#a1.__balance -= 5000
+a1.get_balance()
 a1.deposit(500)
 a1.withdraw(1200)
 a1.withdraw(1200)
